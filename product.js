@@ -43,7 +43,7 @@ function removeProduct(id) {
 function resetProducts() {
     products = []
     id = 0
-}
+} 
 
 
 
@@ -52,6 +52,8 @@ function updateProduct(name, price, id) {
         if (product.id === id) {
             product.name = name
             product.price = price
-        }
-    })
+    } else {
+        throw new Error("Este producto no existe");
+    }    
+})
 }
